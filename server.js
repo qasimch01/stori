@@ -1,7 +1,7 @@
 const express= require("express");
 var app=express();
 
-const bodyParser = require("body-Parser")
+const bodyParser = require("body-parser")
 const request = require("request")
 const MailChimp = require("mailchimp-api-v3")
 const apiKey = '43cf1b00a27ef7aca4ec2884ef53d304-us18';
@@ -9,7 +9,6 @@ const listId = "01bc429b1c";
 const mailchimp = new MailChimp(apiKey)
 
 app.use(bodyParser.urlencoded({ extended: true }))
-app.use(bodyParser.json());
 app.use(express.static("public"))
 
 app.get('/',function (req,res) 
